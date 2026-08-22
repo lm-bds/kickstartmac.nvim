@@ -836,6 +836,9 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    -- The new `main` branch uses a different, still-evolving configuration API.
+    -- Kickstart's `nvim-treesitter.configs` setup below targets the stable API.
+    branch = 'master',
     build = ':TSUpdate',
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
